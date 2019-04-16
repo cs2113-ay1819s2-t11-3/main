@@ -52,5 +52,6 @@ endif::[]
 _Marco Jakob_.
 * This application is modified from AddressBook-Level4 project created by SE-EDU initiative at https://github.com/se-edu/
 * Libraries used: https://github.com/TestFX/TestFX[TextFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]
+* APIs used: https://min-api.cryptocompare.com/[CryptoCompare]
 
 == Licence : link:LICENSE[MIT]
