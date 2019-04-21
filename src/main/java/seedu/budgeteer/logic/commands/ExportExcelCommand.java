@@ -110,7 +110,7 @@ public class ExportExcelCommand extends Command {
     private static Boolean exportDataIntoExcelSheetWithGivenRecords(
             List<Entry> entryList, List<SummaryEntry> daySummaryEntryList, String filePath) {
         XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet recordData = workbook.createSheet("RECORD DATA");
+        XSSFSheet recordData = workbook.createSheet("ENTRIES DATA");
         XSSFSheet summaryData = workbook.createSheet("SUMMARY DATA");
         if (entryList.size() > 0) {
             ExcelUtil.writeExcelSheetIntoDirectory(

@@ -75,8 +75,8 @@ public class ExcelUtil {
     private static final String MONEY_TITLE = "MONEY";
     private static final String TAG_TITLE = "TAGS";
     private static final String INCOME_TITLE = "INCOME";
-    private static final String OUTCOME_TITLE = "OUTCOME";
-    private static final String TOTAL_MONEY = "TOTAL";
+    private static final String OUTCOME_TITLE = "EXPENSES";
+    private static final String TOTAL_MONEY = "NET";
     private static final String TAG_SEPARATOR = "  ... ";
 
     private static Logger logger = LogsCenter.getLogger(ExcelUtil.class);

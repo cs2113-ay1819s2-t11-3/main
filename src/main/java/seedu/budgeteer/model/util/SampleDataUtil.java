@@ -17,19 +17,31 @@ import seedu.budgeteer.model.tag.Tag;
  */
 public class SampleDataUtil {
     public static Entry[] getSampleEntrys() {
-        return new Entry[] {
-            new Entry(new Name("Salary from Alex Yeoh"), new Date("11-11-2019"), CashFlow.getCashFlow("+100"),
-                getTagSet("friends")),
-            new Entry(new Name("Lunch with Bernice Yu"), new Date("12-12-2018"), CashFlow.getCashFlow("+100"),
-                getTagSet("colleagues", "friends")),
-            new Entry(new Name("Burger with Charlotte Oliveiro"), new Date("11-11-2019"), CashFlow.getCashFlow("+100"),
-                getTagSet("neighbours")),
-            new Entry(new Name("School Loan"), new Date("12-12-2018"), CashFlow.getCashFlow("+100"),
-                getTagSet("personal")),
-            new Entry(new Name("Income"), new Date("12-12-2019"), CashFlow.getCashFlow("+100"),
-                getTagSet("work")),
-            new Entry(new Name("Dinner with Roy Balakrishnan"), new Date("11-11-2019"), CashFlow.getCashFlow("+100"),
-                getTagSet("colleagues"))
+        return new Entry[]{
+            new Entry(new Name("Salary from tuition"), new Date("10-03-2019"), CashFlow.getCashFlow("+500"),
+                    getTagSet("work")),
+            new Entry(new Name("Lunch with Bernice"), new Date("12-03-2019"), CashFlow.getCashFlow("-12.9"),
+                    getTagSet("colleagues", "friends")),
+            new Entry(new Name("Netflix Subscription"), new Date("13-03-2019"), CashFlow.getCashFlow("-10"),
+                    getTagSet("personal")),
+            new Entry(new Name("Bursary Award"), new Date("14-03-2019"), CashFlow.getCashFlow("+4000"),
+                    getTagSet("school", "award")),
+            new Entry(new Name("Scholarship prize"), new Date("14-03-2019"), CashFlow.getCashFlow("+100"),
+                    getTagSet("school", "award")),
+            new Entry(new Name("Dinner with Roy Balakrishnan"), new Date("17-03-2019"), CashFlow.getCashFlow("-20.90"),
+                    getTagSet("colleagues")),
+            new Entry(new Name("Salary from Part time job"), new Date("20-03-2019"), CashFlow.getCashFlow("+1200"),
+                    getTagSet("work")),
+            new Entry(new Name("Dinner with Bernice"), new Date("31-03-2019"), CashFlow.getCashFlow("-16.70"),
+                    getTagSet("colleagues", "friends")),
+            new Entry(new Name("Shopping for clothes"), new Date("04-04-2019"), CashFlow.getCashFlow("-79.9"),
+                    getTagSet("shopping", "personal")),
+            new Entry(new Name("Lottery Prize"), new Date("07-04-2019"), CashFlow.getCashFlow("+4000"),
+                    getTagSet("personal")),
+            new Entry(new Name("Salary from tuition"), new Date("10-04-2019"), CashFlow.getCashFlow("+500"),
+                    getTagSet("work")),
+            new Entry(new Name("Birthday Celebration for Peter"), new Date("16-04-2019"), CashFlow.getCashFlow("-80"),
+                    getTagSet("colleagues"))
         };
     }
 
