@@ -43,7 +43,6 @@ public class SampleDataUtil {
                 new Entry(new Name("Birthday Celebration for Peter"), new Date("16-04-2019"), CashFlow.getCashFlow("-80"),
                         getTagSet("colleagues"))
         };
- 
     }
 
     public static ReadOnlyEntriesBook getSampleAddressBook() {
