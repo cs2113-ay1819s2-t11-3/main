@@ -30,7 +30,7 @@ public class SampleDataUtil {
                     getTagSet("school", "award")),
             new Entry(new Name("Dinner with Roy Balakrishnan"), new Date("17-03-2019"), CashFlow.getCashFlow("-20.90"),
                     getTagSet("colleagues")),
-            new Entry(new Name("Salary from Part-time job"), new Date("20-03-2019"), CashFlow.getCashFlow("+1200"),
+            new Entry(new Name("Salary from Part time job"), new Date("20-03-2019"), CashFlow.getCashFlow("+1200"),
                     getTagSet("work")),
             new Entry(new Name("Dinner with Bernice"), new Date("31-03-2019"), CashFlow.getCashFlow("-16.70"),
                     getTagSet("colleagues", "friends")),
