@@ -242,10 +242,9 @@ the *net cash flow calculated.*
 ****
 * Note that there are specific formats required for the dates and months entered.
 Capital letters of  REPORT is not allowed, instead report is used.
-* For the commands *"report"* and *"summary category"*, START_DATE/END_DATE must be in the format of
+* For the commands *"report"*, START_DATE/END_DATE must be in the format of
 `dd-mm-yyyy` where `dd` represents day, `mm` represents month, `yyyy` represents year.
-* For command *"report"*, START_MONTH/END_MONTH must in the format of `mmm-yyyy`, `mmm` represents the month with its three letter representations, and
-`yyyy` represents the year in its numerical form.
+
 
 ****
 
@@ -294,27 +293,27 @@ later versions of the product to remove the labels completely and use a mouse ov
 
 Examples:
 
-* `report insight`
+* `report insight/`
 
 Below are some screenshots of what you can see when the command has been accepted. The commands entered have been left
 in for visualisation purposes. These screenshots are taken in *fullscreen mode* at 1080p resolution.
 
 image::RI1.PNG[width="790"]
-*Screenshot of app displaying income breakdown when `report insight` is run*
+*Screenshot of app displaying income breakdown when `report insight/` is run*
 
 image::RI2.PNG[width="790"]
-*Screenshot of app displaying expense breakdown when `report insight` is run*
+*Screenshot of app displaying expense breakdown when `report insight/` is run*
 
-* `report insight d/11-11-2018 12-12-2019`
+* `report insight/ s/11-11-2018 e/12-12-2019`
 
 Below are some screenshots of what you can see when the command has been accepted. The commands entered have been left
 in for visualisation purposes. These screenshots are taken in *fullscreen mode* at 1080p resolution.
 
 image::RI3.PNG[width="790"]
-*Screenshot of app displaying income breakdown when `report insight d/11-11-2018 12-12-2019` is run*
+*Screenshot of app displaying income breakdown when `report insight/ s/11-11-2018 e/12-12-2019` is run*
 
 image::RI4.PNG[width="790"]
-*Screenshot of app displaying expense breakdown wgithen `report insight d/11-11-2018 12-12-2019` is run*
+*Screenshot of app displaying expense breakdown when `report insight/ s/11-11-2018 e/12-12-2019` is run*
 
 // end::report_insight[]
 
