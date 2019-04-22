@@ -106,27 +106,6 @@ public class EditCommandTest {
     }
 
     @Test
-    public void execute_duplicateEntryUnfilteredList_failure() {
-        Entry firstEntry = model.getFilteredEntryList().get(INDEX_FIRST_ENTRY.getZeroBased());
-        EditEntryDescriptor descriptor = new EditEntryDescriptorBuilder(firstEntry).build();
-        EditCommand editCommand = new EditCommand(INDEX_SECOND_ENTRY, descriptor);
-
-        assertCommandFailure(editCommand, model, commandHistory, EditCommand.MESSAGE_DUPLICATE_ENTRY);
-    }
-
-    @Test
-    public void execute_duplicateEntryFilteredList_failure() {
-        showEntryAtIndex(model, INDEX_FIRST_ENTRY);
-
-        // edit entry in filtered list into a duplicate in budgeteer book
-        Entry entryInList = model.getAddressBook().getEntryList().get(INDEX_SECOND_ENTRY.getZeroBased());
-        EditCommand editCommand = new EditCommand(INDEX_FIRST_ENTRY,
-                new EditEntryDescriptorBuilder(entryInList).build());
-
-        assertCommandFailure(editCommand, model, commandHistory, EditCommand.MESSAGE_DUPLICATE_ENTRY);
-    }
-
-    @Test
     public void execute_invalidEntryIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredEntryList().size() + 1);
         EditEntryDescriptor descriptor = new EditEntryDescriptorBuilder().withName(VALID_NAME_BOB).build();
