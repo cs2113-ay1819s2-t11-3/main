@@ -761,13 +761,13 @@ Step 4. The resulting information is displayed to the user with a message. If ei
 ** Pros: Will be more accurate and will be a better representation of how people actually save and invest over time.
 ** Cons: Would be very complicated to do from the command line, so more work for the user and potentially confusing.
 // end::invest[]
-
+//@@author ngkaicong
 // tag::exportexcel[]
 === Export entries from Budgeteer to Excel file.
 ==== Current implementation
-The export into excel file mechanism is facilitated by `ModelManager` with the help of `ExcelUtil`, the utility created to handle all methods relating to Excel. It represents an in-memory model of the Savee and is the component which manages the interactions between the commands, `ExcelUtil` and the `VersionedEntriesBook`. ExportExcelCommand calls `ModelManager#updateFilteredRecords` and passes in different predicates depending on the argument mode.
-The List<Record> is retrieved by calling `ModelManager#getFilteredRecordList`. Meanwhile, it also called `ModelManager#getEntriesBook` to get the `ReadOnlyEntriesBook`. The SummaryByDateList is constructed after the ReadOnlyEntriesBook together with the predicate are passed into the construction of SummaryByDateList. The List<SummaryEntry> is easily retrieved from SummaryByDateList by calling `SummaryByDateList#getSummaryList`. `ExcelUtil#setNameExcelFile` is called to make the Excel name based on the condition of startDate and endDate. After that, `ExcelUtil#setPathFile` is called to set the Path file, which is the location of the Excel file stored in future.
-The Path file is constructed based on the name of the Excel file we retrieve above and the directory Path, it can be either optionally entered by the user or the default *User's Working Directory*. With the sufficient information, `List<Record> entries`, `List<SummaryByDateEntry> summaryList`, `file path`, `ExportExcelCommand#exportDataIntoExcelSheetWithGivenRecords` is called to start the processing of producing Excel file.
+The export into excel file mechanism is facilitated by `ModelManager` with the help of `ExcelUtil`, the utility created to handle all methods relating to Excel. It represents an in-memory model of the Budgeteer and is the component which manages the interactions between the commands, `ExcelUtil` and the `VersionedEntriesBook`. ExportExcelCommand calls `ModelManager#updateFilteredEntries` and passes in different predicates depending on the argument mode.
+The List<Entry> is retrieved by calling `ModelManager#getFilteredEntryList`. Meanwhile, it also called `ModelManager#getEntriesBook` to get the `ReadOnlyEntriesBook`. The SummaryByDateList is constructed after the ReadOnlyEntriesBook together with the predicate are passed into the construction of SummaryByDateList. The List<SummaryEntry> is easily retrieved from SummaryByDateList by calling `SummaryByDateList#getSummaryList`. `ExcelUtil#setNameExcelFile` is called to make the Excel name based on the condition of startDate and endDate. After that, `ExcelUtil#setPathFile` is called to set the Path file, which is the location of the Excel file stored in future.
+The Path file is constructed based on the name of the Excel file we retrieve above and the directory Path, it can be either optionally entered by the user or the default *User's Working Directory*. With the sufficient information, `List<Entry> entries`, `List<SummaryByDateEntry> summaryList`, `file path`, `ExportExcelCommand#exportDataIntoExcelSheetWithGivenEntries` is called to start the processing of producing Excel file.
 
 There are 6 modes for this feature [refer to *Export the entry data from Budgeter to the Excel file* part in *User Guide*]. The mechanism that facilitates these modes can be found in the `ExportExcelCommandParser#parse`. Below is a overview of the mechanism:
 
@@ -785,14 +785,13 @@ There are 6 modes for this feature [refer to *Export the entry data from Budgete
 The `ExportExcelCommand` has four constructors which makes use of overloading to reduce code complexity.
 
 * One constructor has no arguments and assigns default predicate for the `FilteredList` in `ModelManager`,
-`PREDICATE_SHOW_ALL_RECORDS` which will show all items in the list and the Directory path is *User's Working Directory*.
+`PREDICATE_SHOW_ALL_ENTRIES` which will show all items in the list and the Directory path is *User's Working Directory*.
 * The second constructor takes in 2 `Date` arguments and assigns the predicate `DateIsWithinDateIntervalPredicate` which will only show items within the date interval and the Directory path is *User's Working Directory*.
-* The third constructor takes in 1 `Directory Path` argument and assigns the predicate as `PREDICATE_SHOW_ALL_RECORDS`, which will show all items in the list and the Directory path is the entered directory path.
+* The third constructor takes in 1 `Directory Path` argument and assigns the predicate as `PREDICATE_SHOW_ALL_ENTRIES`, which will show all items in the list and the Directory path is the entered directory path.
 * The fourth constructor takes in 1 `Directory Path` and 2 `Date` arguments and assigns the predicate as `DateIsWithinDateIntervalPredicate` which will only show items within the date interval and the Directory path is the entered Directory Path.
 
 If the Excel file with the same name and stored in same Directory exists, it will be overwritten. However, it *must* be closed before we enter the command. +
 
-Please note that `undo` and `redo` command can only affect Budgeter but the *not* the Excel file created, meaning that when you enter `undo` command after you enter the `export` command, Budgeter will inform the user that *No more command to undo*, the entries remain the same and the Excel file created will *not* be deleted.
 // end::exportexcel[]
 
 // tag::draw_line_chart[]
@@ -805,6 +804,7 @@ The feature mechanism is facilitated by `ExcelUtil`, which handles all methods r
 
 // end::draw_line_chart[]
 == Documentation
+//@@author 
 
 We use asciidoc for writing documentation.
 

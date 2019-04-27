@@ -30,6 +30,7 @@ Role: Developer +
 
 
 '''
+//@@author ngkaicong
 
 === Ng Kai Cong
 image::ngkaicong.png[width="150", align="left"]
@@ -37,7 +38,7 @@ image::ngkaicong.png[width="150", align="left"]
 {empty}[https://cs2113-ay1819s2-t11-3.github.io/main/team/kaicong.html[portfolio]]
 
 Role: Developer +
-
+//@@author
 
 '''
 
