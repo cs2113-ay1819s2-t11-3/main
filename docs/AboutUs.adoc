@@ -21,7 +21,6 @@ Role: Developer, QA +
 '''
 
 === Dominic
-image::frankquekch.png[width="150", align="left"]
 {empty}[http://github.com/frankquekch[github]]
 {empty}[https://cs2113-ay1819s2-t11-3.github.io/main/team/dominic.html[portfolio]]
 
