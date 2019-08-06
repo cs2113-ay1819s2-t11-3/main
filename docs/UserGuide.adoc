@@ -611,7 +611,7 @@ image::linechart.png[width="500"]
 
 // end::draw_line_chart[]
 
-//@@author 
+
 
 == FAQ
 
